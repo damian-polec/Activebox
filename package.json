@@ -1,0 +1,25 @@
+{
+  "name": "projekt-2",
+  "version": "1.0.0",
+  "description": "Projekt 2 dla ambitnych Kodilla.com",
+  "main": "index.js",
+  "dependencies": {
+    "grunt-cli": "^1.2.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
+  },
+  "scripts": {
+    "test": "projekt-2"
+  },
+  "keywords": [
+    "Projekt",
+    "2",
+    "Kodilla.com"
+  ],
+  "author": "Damian Polec",
+  "license": "ISC"
+}

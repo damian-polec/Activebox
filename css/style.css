@@ -1,0 +1,280 @@
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i|Open+Sans:400,700|Raleway:400,700);
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Raleway", sans-serif; }
+
+header .container {
+  border-bottom: 1px solid rgba(96, 96, 96, 0.8);
+  font-family: "Raleway", sans-serif; }
+
+header .navbar-toggle .icon-bar {
+  background: #fff; }
+
+header .navbar-brand {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 100;
+  color: #fff;
+  padding: 20px;
+  text-shadow: 0px 0px 10px #000; }
+  header .navbar-brand span {
+    font-weight: 700;
+    color: #C6CACC;
+    font-size: 27px; }
+
+header .nav a {
+  color: #fff;
+  font-size: 12.5px;
+  text-transform: uppercase;
+  padding: 20px;
+  background: none;
+  font-weight: 700;
+  text-shadow: 0px 0px 5px #000;
+  transition: .5s;
+  text-align: center; }
+  header .nav a:hover, header .nav a:focus {
+    background: none;
+    font-size: 15px;
+    transition: .5s; }
+
+#hero {
+  background-color: rgba(41, 45, 71, 0.93);
+  margin: 0;
+  padding: 0;
+  height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-family: "Raleway", sans-serif; }
+  #hero::after {
+    background-image: url("https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/DB76C7C65B.jpg");
+    background-size: cover;
+    background-position: center;
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    height: inherit; }
+  #hero .container {
+    color: #fff;
+    text-align: center; }
+    #hero .container h1 {
+      text-transform: uppercase;
+      font-weight: 700;
+      text-shadow: 0px 0px 10px #000;
+      font-family: "Open Sans", sans-serif; }
+    #hero .container p {
+      margin: 15px auto;
+      text-shadow: 0px 0px 10px #000; }
+    #hero .container .btn {
+      padding: 15px 50px;
+      margin-top: 50px;
+      text-transform: uppercase; }
+
+#features {
+  margin: 50px auto; }
+  #features [class*='col-'] {
+    text-align: center; }
+  #features .fa {
+    color: #e84848;
+    font-size: 60px;
+    padding: 25px; }
+  #features h4 {
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    font-weight: 700; }
+  #features p {
+    opacity: 0.7;
+    line-height: 1.5; }
+
+#works [class*='col-'] {
+  margin: 0;
+  padding: 0;
+  border: 1px solid #fff;
+  overflow: hidden;
+  z-index: 0; }
+  #works [class*='col-']::before {
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    content: '';
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    transition: transform .3s ease-out;
+    background: rgba(232, 72, 72, 0.8); }
+  #works [class*='col-']:hover::before {
+    transform: scaleX(1);
+    z-index: 0; }
+  #works [class*='col-']:hover .layer {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    transition: .3s;
+    z-index: 0;
+    transform: scaleX(1); }
+
+#works .row {
+  margin: auto 0; }
+  #works .row:last-of-type [class*='col-'] {
+    border-top: 0; }
+
+#works img {
+  width: 100%;
+  display: block;
+  height: 250px;
+  object-fit: cover;
+  z-index: -1; }
+
+#works .layer {
+  position: absolute;
+  width: 100%;
+  height: 250px;
+  transition: .3s;
+  padding-top: 100px;
+  color: #fff;
+  text-shadow: 0 0 20px #000;
+  font: "Raleway", sans-serif;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform .3s ease-out; }
+  #works .layer a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700; }
+    #works .layer a:hover {
+      text-decoration: underline; }
+
+#team .container {
+  margin: 75px auto;
+  font: "Raleway", sans-serif; }
+
+#team img {
+  width: 100%;
+  height: 250px;
+  border-radius: 4px; }
+
+#team h5 {
+  font-size: 20px;
+  line-height: 1.2;
+  text-shadow: 0 0 1px #000; }
+
+#team [class*='col-'] {
+  margin: 15px 0; }
+  #team [class*='col-'] p:first-of-type {
+    color: #e84848;
+    text-transform: uppercase;
+    font-size: 12px; }
+  #team [class*='col-'] p:last-of-type {
+    opacity: 0.8;
+    margin: 20px auto; }
+
+#team .btn {
+  background: none;
+  color: #C6CACC;
+  border: 1px solid #C6CACC;
+  border-radius: 4px;
+  font-size: 15px;
+  width: 40px;
+  height: 40px;
+  transition: .5s; }
+  #team .btn:hover {
+    color: #fff;
+    background: #e84848;
+    transition: .5s; }
+
+#testimonials [class*="col-"] {
+  padding: 0; }
+
+#testimonials img {
+  width: 100%;
+  display: block;
+  height: 450px;
+  object-fit: cover;
+  z-index: -1; }
+
+#testimonials #myCarousel {
+  background: #53354a;
+  min-height: 450px;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  color: #fff; }
+  #testimonials #myCarousel .carousel-inner .item p {
+    font-size: 25px;
+    line-height: 1.5em;
+    padding: 15px;
+    font-style: italic;
+    font-family: "Cardo", serif; }
+    #testimonials #myCarousel .carousel-inner .item p:last-of-type {
+      font-size: 12px;
+      text-transform: uppercase; }
+
+#download .container {
+  min-height: 250px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px; }
+  #download .container h2 {
+    text-transform: capitalize;
+    font-weight: lighter; }
+  #download .container p {
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    font-weight: 700; }
+  #download .container button {
+    text-transform: uppercase;
+    padding: 15px 50px; }
+
+footer .row:first-of-type {
+  padding: 50px;
+  margin: 0 auto;
+  min-height: 200px;
+  text-align: center;
+  background: #3A3E64;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; }
+  footer .row:first-of-type h4 {
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 0 0 5px #000; }
+  footer .row:first-of-type a {
+    text-decoration: none;
+    color: #fff; }
+    footer .row:first-of-type a .fa {
+      height: 40px;
+      width: 40px;
+      border: 2px solid #fff;
+      font-size: 20px;
+      line-height: 2em;
+      transition: .5s; }
+      footer .row:first-of-type a .fa:hover {
+        background: #fff;
+        color: #3A3E64;
+        transition: .5s; }
+
+footer .row:last-of-type {
+  background: #292d47;
+  color: #fff;
+  text-align: center;
+  line-height: 2em;
+  font-size: 15px; }
+
+/*# sourceMappingURL=style.css.map */

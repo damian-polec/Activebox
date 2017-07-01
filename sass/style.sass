@@ -1,0 +1,304 @@
+//Import
+@import url(https://fonts.googleapis.com/css?family=Cardo:400,400i|Open+Sans:400,700|Raleway:400,700)
+
+//fonts
+$font-rel: 'Raleway', sans-serif
+$font-open: 'Open Sans', sans-serif
+$font-cardo: 'Cardo', serif
+
+//colors
+$light-gray: rgba(96, 96, 96, 0.8)
+$red: rgb(232, 72, 72)
+$gray: #C6CACC
+
+//mixins
+
+*
+  box-sizing: border-box
+body
+  font-family: $font-rel
+
+//---------------------NAVIGATION------------------
+header
+  .container
+    border-bottom: 1px solid $light-gray
+    font-family: $font-rel
+  .navbar-toggle
+    .icon-bar
+      background: #fff
+  .navbar-brand
+    text-transform: uppercase
+    font-size: 25px
+    font-weight: 100
+    color: #fff
+    padding: 20px
+    text-shadow: 0px 0px 10px #000
+    span
+      font-weight: 700
+      color: $gray
+      font-size: 27px
+  .nav
+    a
+      color: #fff
+      font-size: 12.5px
+      text-transform: uppercase
+      padding: 20px
+      background: none
+      font-weight: 700
+      text-shadow: 0px 0px 5px #000
+      transition: .5s
+      text-align: center
+      &:hover, &:focus
+        background: none
+        font-size: 15px
+        transition: .5s
+//---------------------HERO SECTION------------------
+#hero
+  background-color: rgba(41, 45, 71, 0.93)
+  margin: 0
+  padding: 0
+  height: 600px
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  justify-content: center
+  font-family: $font-rel
+  &::after
+    background-image: url('https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/DB76C7C65B.jpg')
+    background-size: cover
+    background-position: center
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    z-index: -1
+    height: inherit
+  .container
+    color: #fff
+    text-align: center
+    h1
+      text-transform: uppercase
+      font-weight: 700
+      text-shadow: 0px 0px 10px #000
+      font-family: $font-open
+    p
+      margin: 15px auto
+      text-shadow: 0px 0px 10px #000
+    .btn
+      padding: 15px 50px
+      margin-top: 50px
+      text-transform: uppercase
+
+//---------------------FEATURES SECTION------------------
+
+#features
+  margin: 50px auto
+  [class*='col-']
+    text-align: center
+  .fa
+    color: $red
+    font-size: 60px
+    padding: 25px
+  h4
+    text-transform: uppercase
+    padding-bottom: 20px
+    font-weight: 700
+  p
+    opacity: 0.7
+    line-height: 1.5
+
+//---------------------WORKS SECTION------------------
+
+#works
+  [class*='col-']
+    margin: 0
+    padding: 0
+    border: 1px solid #fff
+    overflow: hidden
+    z-index: 0
+    &::before
+      width: 100%
+      height: 250px
+      position: absolute
+      content: ''
+      z-index: -1
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      transform: scaleX(0)
+      transform-origin: 0 50%
+      transition: transform .3s ease-out
+      background: rgba(232, 72, 72, 0.8)
+    &:hover
+      &::before
+        transform: scaleX(1)
+        z-index: 0
+      .layer
+        display: flex
+        align-items: center
+        flex-flow: column
+        transition: .3s
+        z-index: 0
+        transform: scaleX(1)
+  .row
+    margin: auto 0
+    &:last-of-type
+      [class*='col-']
+        border-top: 0
+  img
+    width: 100%
+    display: block
+    height: 250px
+    object-fit: cover
+    z-index: -1
+  .layer
+    position: absolute
+    width: 100%
+    height: 250px
+    transition: .3s
+    padding-top: 100px
+    color: #fff
+    text-shadow: 0 0 20px #000
+    font: $font-rel
+    z-index: -1
+    transform: scaleX(0)
+    transform-origin: 0 50%
+    transition: transform .3s ease-out
+    a
+      text-decoration: none
+      color: #fff
+      text-transform: uppercase
+      font-weight: 700
+      &:hover
+        text-decoration: underline
+
+//---------------------TEAM SECTION------------------
+
+#team
+  .container
+    margin: 75px auto
+    font: $font-rel
+  img
+    width: 100%
+    height: 250px
+    border-radius: 4px
+  h5
+    font-size: 20px
+    line-height: 1.2
+    text-shadow: 0 0 1px #000
+  [class*='col-']
+    margin: 15px 0
+    p
+      &:first-of-type
+        color: $red
+        text-transform: uppercase
+        font-size: 12px
+      &:last-of-type
+        opacity: 0.8
+        margin: 20px auto
+  .btn
+    background: none
+    color: $gray
+    border: 1px solid $gray
+    border-radius: 4px
+    font-size: 15px
+    width: 40px
+    height: 40px
+    transition: .5s
+    &:hover
+      color: #fff
+      background: $red
+      transition: .5s
+
+//TESTIMONIALS SECTION //
+#testimonials
+  [class*="col-"]
+    padding: 0
+  img
+    width: 100%
+    display: block
+    height: 450px
+    object-fit: cover
+    z-index: -1
+  #myCarousel
+    background: #53354a
+    min-height: 450px
+    display: flex
+    align-items: center
+    padding: 30px
+    color: #fff
+    .carousel-inner
+      .item
+        p
+          font-size: 25px
+          line-height: 1.5em
+          padding: 15px
+          font-style: italic
+          font-family: $font-cardo
+          &:last-of-type
+            font-size: 12px
+            text-transform: uppercase
+
+//DOWNLOAD SECTION //
+
+#download
+  .container
+    min-height: 250px
+    display: flex
+    flex-flow: column
+    align-items: center
+    justify-content: center
+    text-align: center
+    padding: 20px
+    h2
+      text-transform: capitalize
+      font-weight: lighter
+    p
+      text-transform: uppercase
+      padding-bottom: 20px
+      font-weight: 700
+    button
+      text-transform: uppercase
+      padding: 15px 50px
+
+//FOOTER//
+
+footer
+  .row
+    &:first-of-type
+      padding: 50px
+      margin: 0 auto
+      min-height: 200px
+      text-align: center
+      background: #3A3E64
+      color: #fff
+      display: flex
+      justify-content: center
+      flex-wrap: wrap
+      h4
+        text-transform: uppercase
+        font-weight: 700
+        text-shadow: 0 0 5px #000
+      a
+        text-decoration: none
+        color: #fff
+        .fa
+          height: 40px
+          width: 40px
+          border: 2px solid #fff
+          font-size: 20px
+          line-height: 2em
+          transition: .5s
+          &:hover
+            background: #fff
+            color: #3A3E64
+            transition: .5s
+    &:last-of-type
+      background: rgb(41, 45, 71)
+      color: #fff
+      text-align: center
+      line-height: 2em
+      font-size: 15px
